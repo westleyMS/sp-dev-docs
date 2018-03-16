@@ -132,7 +132,8 @@ The implementation requires two managed properties for each item received via th
     
 The **IContentProcessingEnrichmentService** implementation writes the raw binary data to a temporary location on disk, with **Filename** as the name of the file. Then, a new name is added to the list of authors and returned to the content processing component.
   
-    
+        > [!NOTE]
+    > If the datasource is an BCS external datasource, the rawdata stream will be null as this data is not available. The body property will have a string representation of the stream. 
     
 
 ### To create the class file for the content enrichment service
